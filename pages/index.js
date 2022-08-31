@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import {Header} from "../components/Header";
 
-export default function Home() {
+export const Home = () => {
   return (
     <div>
       <Head>
@@ -15,3 +15,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home;

@@ -3,8 +3,20 @@ import Image from "next/image";
 import {Header} from "../components/Header";
 import {Footer} from "../components/Footer";
 import {MicrophoneIcon, SearchIcon} from "@heroicons/react/solid";
+import { useRouter } from "next/router";
+import { useRef } from "react";
 
 const Home = () => {
+    const router = useRouter();
+    const searchInputRef = useRef(null);
+
+    function search(event) {
+        event.preventDefault();
+        const term = searchInputRef.current.value;
+        if (!term.trim()) return;
+        router.push(`/search?term=${term.trim()}&searchType=`);
+    }
+
     return (
         <div className="bg-black-200">
             <Head>
@@ -27,6 +39,7 @@ const Home = () => {
                     <SearchIcon className="h-5 text-gray-500 mr-3"/>
 
                     <input
+                        ref={searchInputRef}
                         type="text"
                         className="flex-grow focus:outline-none"
                     />
@@ -34,7 +47,7 @@ const Home = () => {
                 </div>
                 <div
                     className="flex flex-col sm:flex-row w-[50%] space-y-2 mt-8 sm:space-y-0 sm:space-x-4 justify-center">
-                    <button className="btn">
+                    <button onClick={search} className="btn">
                         Google Search
                     </button>
                     <button className="btn">

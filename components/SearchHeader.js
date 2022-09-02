@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useRef } from "react";
 import { MicrophoneIcon, SearchIcon, XIcon } from "@heroicons/react/solid";
 import {User} from "./User";
+import {SearchOptions} from "./SearchOptions";
 
 export const SearchHeader = () => {
     const router = useRouter();
@@ -40,10 +41,11 @@ export const SearchHeader = () => {
                     />
                     <MicrophoneIcon className="h-6 hidden sm:inline-flex text-blue-500 pl-4 border-l-2 border-gray-300 mr-3" />
                     <SearchIcon onClick={search} className="h-6 hidden sm:inline-flex text-blue-500" />
-                    <button onClick={search} type="submit" hidden> </button>
+                    <button onClick={search} type="submit"> </button>
                 </form>
                 <User className="ml-auto whitespace-nowrap" />
             </div>
+            <SearchOptions/>
         </header>
     )
 }

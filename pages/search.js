@@ -2,6 +2,7 @@ import Head from "next/head";
 import {SearchHeader} from "../components/SearchHeader";
 import {useRouter} from "next/router";
 import Response from "../Response";
+import {SearchResults} from "../components/SearchResults";
 
 const search = ({results}) => {
     console.log(results);
@@ -14,6 +15,7 @@ const search = ({results}) => {
             </Head>
 
             <SearchHeader/>
+            <SearchResults results={results}/>
         </div>
     )
 }

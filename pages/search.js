@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Response from "../Response";
 import {SearchHeader} from "../components/SearchHeader";
 import {useRouter} from "next/router";
 import {SearchResults} from "../components/SearchResults";

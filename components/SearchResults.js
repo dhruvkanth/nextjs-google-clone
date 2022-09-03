@@ -1,4 +1,5 @@
 import Parser from "html-react-parser"
+import {PaginationButtons} from "./PaginationButtons";
 
 export const SearchResults = ({results}) => {
     return (
@@ -15,6 +16,7 @@ export const SearchResults = ({results}) => {
                     <p className="text-gray-600">{Parser(result.htmlSnippet)}</p>
                 </div>
             ))}
+            <PaginationButtons/>
         </div>
     )
 }

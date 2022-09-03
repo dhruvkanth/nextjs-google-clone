@@ -36,7 +36,7 @@ const Home = () => {
 
             <Header/>
 
-            <form className="flex flex-col items-center mt-40">
+            <form className="flex flex-col items-center mt-40 min-h-[70vh] lg:mt-60 lg:min-h-[60vh] xl:mt-70 ">
                 <Image
                     width="300"
                     objectFit="cover"

@@ -10,9 +10,9 @@ export const ImageResults = ({results}) => {
                             <a href={result.image.contextLink}>
                                 <picture>
                                     <img
-                                    className="group-hover:shadow-xl w-full h-60 object-contain"
-                                    src={result.link}
-                                    alt={result.title}
+                                        className="group-hover:shadow-xl w-full h-60 object-contain"
+                                        src={result.link}
+                                        alt={result.title}
                                     />
                                 </picture>
                             </a>

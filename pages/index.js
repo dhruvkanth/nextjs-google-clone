@@ -34,38 +34,41 @@ const Home = () => {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
-            <Header/>
+            <div className="bg-[#202124] text-[#e8eaed]">
+                <Header/>
 
-            <form className="flex flex-col items-center mt-40 min-h-[70vh] lg:mt-60 lg:min-h-[60vh] xl:mt-70 ">
-                <Image
-                    width="300"
-                    objectFit="cover"
-                    height="100"
-                    alt="Google Icon"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"
-                />
-                <div className="flex w-full mt-5 mx-auto max-w-[90%] border border-gary-200 hover:shadow-lg focus-within:shadow-lg px-5 py-3 rounded-full items-center sm:max-w-xl lg:max-w-2xl">
-                    <SearchIcon className="h-5 text-gray-500 mr-3"/>
-
-                    <input
-                        ref={searchInputRef}
-                        type="text"
-                        className="flex-grow focus:outline-none"
+                <form className="flex flex-col items-center mt-40 min-h-[70vh] lg:mt-60 lg:min-h-[60vh] xl:mt-70 ">
+                    <Image
+                        width="300"
+                        objectFit="cover"
+                        height="100"
+                        alt="Google Icon"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"
                     />
-                    <MicrophoneIcon className="h-5"/>
-                </div>
-                <div
-                    className="flex flex-col sm:flex-row w-[50%] space-y-2 mt-8 sm:space-y-0 sm:space-x-4 justify-center">
-                    <button onClick={search} className="btn">
-                        Google Search
-                    </button>
-                    <button onClick={randomSearch} className="btn">
-                        I&apos;m Feeling Lucky
-                    </button>
-                </div>
-            </form>
+                    <div
+                        className="flex w-full mt-5 mx-auto max-w-[90%] border border-gary-200 hover:shadow-lg focus-within:shadow-lg px-5 py-3 rounded-full items-center sm:max-w-xl lg:max-w-2xl">
+                        <SearchIcon className="h-5 text-[#9aa0a5] mr-3"/>
 
-            <Footer/>
+                        <input
+                            ref={searchInputRef}
+                            type="text"
+                            className="flex-grow bg-[#202124] focus:outline-none"
+                        />
+                        <MicrophoneIcon className="h-5 text-[#9aa0a5]"/>
+                    </div>
+                    <div
+                        className="flex flex-col sm:flex-row w-[50%] space-y-2 mt-8 sm:space-y-0 sm:space-x-4 justify-center">
+                        <button onClick={search} className="btn">
+                            Google Search
+                        </button>
+                        <button onClick={randomSearch} className="btn">
+                            I&apos;m Feeling Lucky
+                        </button>
+                    </div>
+                </form>
+
+                <Footer/>
+            </div>
         </div>
     )
 }

@@ -17,7 +17,7 @@ export const SearchHeader = () => {
     }
 
     return (
-        <header className="sticky top-0 bg-white">
+        <header className="sticky top-0 bg-[#202124] text-[#969ba1]">
             <div className="flex w-full p-6 items-center">
                 <Image
                     onClick={() => router.push("/")}
@@ -33,14 +33,14 @@ export const SearchHeader = () => {
                         type="text"
                         defaultValue={router.query.term}
                         ref={searchInputRef}
-                        className="w-full focus:outline-none"
+                        className="w-full bg-[#202124] focus:outline-none"
                     />
                     <XIcon
                         onClick={() => (searchInputRef.current.value = "")}
                         className="h-7 text-gray-500 cursor-pointer sm:mr-3"
                     />
-                    <MicrophoneIcon className="h-6 hidden sm:inline-flex text-blue-500 pl-4 border-l-2 border-gray-300 mr-3"/>
-                    <SearchIcon onClick={search} className="h-6 hidden sm:inline-flex text-blue-500"/>
+                    <MicrophoneIcon className="h-6 hidden sm:inline-flex text-[#9aa0a5] pl-4 border-l-2 border-gray-300 mr-3"/>
+                    <SearchIcon onClick={search} className="h-6 hidden sm:inline-flex text-[#9aa0a5]"/>
                     <button onClick={search} type="submit"> </button>
                 </form>
                 <User className="ml-auto whitespace-nowrap"/>

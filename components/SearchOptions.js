@@ -1,5 +1,5 @@
 import {useRouter} from "next/router"
-import SearchOption from "./SearchOption";
+import {SearchOption} from "./SearchOption";
 import {PhotographIcon, SearchIcon} from "@heroicons/react/outline";
 
 export const SearchOptions = () => {

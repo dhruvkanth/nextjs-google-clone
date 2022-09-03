@@ -10,7 +10,7 @@ export const User = ({className}) => {
         )
     }
     return (
-        <button className={`bg-blue-500 text-white px-6 py-2  font-medium rounded-md hover:brightness-105 hover:shadow-md ${className}`} onClick={signIn}>
+        <button className={`bg-[#8ab5f7] text-[#202124] px-6 py-2  font-medium rounded-md hover:brightness-125 hover:shadow-md ${className}`} onClick={signIn}>
             Sign in
         </button>
     )

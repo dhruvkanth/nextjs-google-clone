@@ -1,6 +1,6 @@
 import {useRouter} from "next/router";
 
-export default function SearchHeaderOption({title, Icon, selected}) {
+export const SearchOption = ({title, Icon, selected}) => {
     const router = useRouter();
 
     function selectTab(title) {

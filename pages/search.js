@@ -4,9 +4,8 @@ import {useRouter} from "next/router";
 import {SearchResults} from "../components/SearchResults";
 import {ImageResults} from "../components/ImageResults";
 
-const search = ({results}) => {
+export default function Search({ results }) {
     console.log(results);
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const router = useRouter();
 
     return (
@@ -37,5 +36,3 @@ export async function getServerSideProps(context) {
         },
     };
 }
-
-export default search;

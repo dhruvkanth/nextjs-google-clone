@@ -6,7 +6,7 @@ export const SearchOptions = () => {
     const router = useRouter();
     return (
         <div
-            className="flex space-x-8 select-none w-full justify-center text-sm text-gray-700 lg:pl-52 lg:justify-start border-b">
+            className="flex space-x-8 select-none w-full justify-center text-sm text-[#aaadb2] lg:pl-52 lg:justify-start border-b">
             <SearchOption title="All" Icon={SearchIcon} selected={router.query.searchType === "" || !router.query.searchType}/>
             <SearchOption title="Images" Icon={PhotographIcon} selected={router.query.searchType === "image"}/>
         </div>

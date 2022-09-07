@@ -1,8 +1,8 @@
-import {PaginationButtons} from "./PaginationButtons";
+import { PaginationButtons } from "./PaginationButtons";
 
-export const ImageResults = ({results}) => {
+export const ImageResults = ({ results }) => {
     return (
-        <div className="mt-0.1 bg-[#202124]">
+        <div className="mt-0.1 bg-[#202124] min-h-screen">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-3 space-x-4">
                 {results.items?.map((result) => (
                     <div key={result.link} className="mb-8">
@@ -27,7 +27,7 @@ export const ImageResults = ({results}) => {
                 ))}
             </div>
             <div className="ml-16">
-                <PaginationButtons/>
+                <PaginationButtons />
             </div>
         </div>
     );

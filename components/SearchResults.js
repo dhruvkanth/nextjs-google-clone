@@ -1,7 +1,7 @@
 import Parser from "html-react-parser"
-import {PaginationButtons} from "./PaginationButtons";
+import { PaginationButtons } from "./PaginationButtons";
 
-export const SearchResults = ({results}) => {
+export const SearchResults = ({ results }) => {
     return (
         <div className="w-full bg-[#202124] mx-auto px-3 sm:pl-[5%] md:pl-[14%] lg:pl-52">
             <p className="text-[#5c6063] text-sm mb-5">About {results.searchInformation.formattedTotalResults} results ({results.searchInformation.formattedSearchTime} seconds)</p>
@@ -16,7 +16,7 @@ export const SearchResults = ({results}) => {
                     <p className="text-[#e8eaed]">{Parser(result.htmlSnippet)}</p>
                 </div>
             ))}
-            <PaginationButtons/>
+            <PaginationButtons />
         </div>
     )
 }

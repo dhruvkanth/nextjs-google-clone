@@ -1,6 +1,6 @@
-import {User} from "./User";
+import { User } from "./User";
 import Link from "next/link"
-import {useRouter} from "next/router"
+import { useRouter } from "next/router"
 
 export const Header = () => {
     const router = useRouter();
@@ -20,8 +20,8 @@ export const Header = () => {
                 </Link>
 
                 <a onClick={() => router.push(`/search?term=${router.query.term || "google"}&searchType=image`)}
-                   className="nav-item">Images</a>
-                <User/>
+                    className="nav-item">Images</a>
+                <User />
             </div>
         </header>
     )

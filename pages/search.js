@@ -1,10 +1,10 @@
 import Head from "next/head";
-import {SearchHeader} from "../components/SearchHeader";
-import {useRouter} from "next/router";
-import {SearchResults} from "../components/SearchResults";
-import {ImageResults} from "../components/ImageResults";
+import { SearchHeader } from "../components/SearchHeader";
+import { useRouter } from "next/router";
+import { SearchResults } from "../components/SearchResults";
+import { ImageResults } from "../components/ImageResults";
 
-const Search = ({results}) => {
+const Search = ({ results }) => {
     console.log(results);
     const router = useRouter();
 
@@ -14,12 +14,14 @@ const Search = ({results}) => {
                 <title>{router.query.term} - Search page</title>
             </Head>
 
-            <SearchHeader/>
-            {router.query.searchType === "image" ? (
-                <ImageResults results={results}/>
-            ) : (
-                <SearchResults results={results}/>
-            )}
+            <div className="min-h-screen bg-[#202124] text-[#e8eaed]">
+                <SearchHeader />
+                {router.query.searchType === "image" ? (
+                    <ImageResults results={results} />
+                ) : (
+                    <SearchResults results={results} />
+                )}
+            </div>
         </div>
     )
 }

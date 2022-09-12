@@ -1,7 +1,7 @@
 import React from "react";
-import {getProviders, signIn} from "next-auth/react";
+import { getProviders, signIn } from "next-auth/react";
 
-const signin = ({providers}) => {
+const signin = ({ providers }) => {
     return (
         <>
             <div className="mt-20">
@@ -14,7 +14,7 @@ const signin = ({providers}) => {
                                 alt="google-logo"
                             />
                         </picture>
-                        <button className="bg-blue-500 rounded-lg text-white p-3 hover:bg-blue-600 mt-5" onClick={() => signIn(provider.id, {callbackUrl: "/"})}>
+                        <button className="bg-blue-500 rounded-lg text-white p-3 hover:bg-blue-600 mt-5" onClick={() => signIn(provider.id, { callbackUrl: "/" })}>
                             Sign in with {provider.name}
                         </button>
                     </div>
@@ -27,7 +27,7 @@ const signin = ({providers}) => {
 export async function getServerSideProps() {
     const providers = await getProviders();
     return {
-        props: {providers},
+        props: { providers },
     };
 }
 

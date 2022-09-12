@@ -1,12 +1,11 @@
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 
-export const SearchOption = ({title, Icon, selected}) => {
+export const SearchOption = ({ title, Icon, selected }) => {
     const router = useRouter();
 
     function selectTab(title) {
         router.push(
-            `/search?term=${router.query.term}&searchType=${
-                title === "Images" ? "image" : ""
+            `/search?term=${router.query.term}&searchType=${title === "Images" ? "image" : ""
             }`
         );
     }
@@ -14,11 +13,10 @@ export const SearchOption = ({title, Icon, selected}) => {
     return (
         <div
             onClick={() => selectTab(title)}
-            className={`flex items-center space-x-1 border-b-4 border-transparent hover:text-blue-500 cursor-pointer hover:border-blue-500 pb-3 ${
-                selected && "text-blue-500 border-blue-500"
-            }`}
+            className={`flex items-center space-x-1 border-b-4 border-transparent hover:text-blue-500 cursor-pointer hover:border-blue-500 pb-3 ${selected && "text-blue-500 border-blue-500"
+                }`}
         >
-            <Icon className="h-4"/>
+            <Icon className="h-4" />
             <p>{title}</p>
         </div>
     );
